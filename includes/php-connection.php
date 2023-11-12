@@ -6,24 +6,7 @@ function dd($data) {
   echo '</pre>';
 }
 
-class Members {
-  public $name = 'name';
-  public $email = 'email';
-  public $password = 'password';
-  public function __construct() {
 
-  }
-}
-
-$name = new Members();
-$email = new Members();
-$password = new Members();
-
-// echo $name->name;
-// echo "<br>";
-// echo $email->email;
-// echo "<br>";
-// echo $password->password;
 
 $formError = false;
 // Connect to Database
@@ -56,11 +39,43 @@ $allEmails = $statement->fetchALL(PDO::FETCH_OBJ);
       }
       dd($newEmail);
       echo "Entry Recorded";
-     
     } else {
       $formError = true;
       // dd('Error Empty Field');
     }
+
+    $name = test_input($_POST["name"]);
+    $email = test_input($_POST["email"]);
+    $password = test_input($_POST["password"]);    
+  
   }
- 
+
+  // $name = $_POST['name'];
+  // $email = $_POST['email'];
+  // $password = $_POST['password'];
+
+  //   if (empty($name) || empty($email) || empty($password)) {
+  //     // Handle empty fields
+  //     echo "Please fill in all required fields.";
+  // } else {
+  //     // Validate email
+  //     if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+  //         echo "Invalid email format.";
+  //     } else {
+  //         // Sanitize data
+  //         $name = htmlspecialchars($name);
+  //         $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+  //         // Hash the password
+  //         $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+
+  //         // Database interaction - Example using PDO
+  //         $pdo = new PDO('mysql:host=localhost;dbname=your_database', 'username', 'password');
+  //         $stmt = $pdo->prepare('INSERT INTO member (name, email, password) VALUES (:name, :email, :password)');
+  //         $stmt->execute([$name, $email, $hashedPassword]);
+
+  //         echo "Registration successful!";
+  //     }
+  // }
+
+
 ?>

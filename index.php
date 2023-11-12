@@ -7,17 +7,18 @@
 
       <section class="bg-dark p-5">
         <h2 class="text-white text-center m-0">Subscribers: <?php echo count($allEmails); ?></h2>
-        <form  action="/" method="POST" id="item-form" class="form-control-lg container-fluid  w-50">
+        <form  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" id="item-form" class="form-control-lg container-fluid  w-50 needs-validation">
           <div class=" w-50 m-auto mt-5">
 
-            <label for="exampleFormControlInput1" class="form-label text-light">First Name</label>
-            <input name="name" id="name" type="text" class="form-control mb-2 rounded-0"  placeholder="First Name" value="">
+            <label for="validationCustom01" class="form-label text-light">First Name</label>
+            <input name="name" id="validationCustom01" type="text" class="form-control mb-2 rounded-0"  placeholder="First Name" value="" required>
+           
 
-            <label for="exampleFormControlInput1" class="form-label text-light">E-mail</label>
-            <input name="email" id="email" type="text" class="form-control mb-2 rounded-0"  placeholder="example@gmail.com" value="">
+            <label for="validationCustom01" class="form-label text-light">E-mail</label>
+            <input name="email" id="validationCustom01" type="text" class="form-control mb-2 rounded-0"  placeholder="example@gmail.com" value="" required>
 
-            <label for="exampleFormControlInput1" class="form-label text-light">Password</label>
-            <input name="password" id="password" type="password" class="form-control mb-2 rounded-0"  placeholder="Password" value="">
+            <label for="validationCustom01" class="form-label text-light">Password</label>
+            <input name="password" id="validationCustom01" type="password" class="form-control mb-2 rounded-0"  placeholder="Password" value="" required>
 
             <input class="btn btn-warning mt-4 w-50 rounded-0" type="submit" name="submit" value="Sign Up" >
 
