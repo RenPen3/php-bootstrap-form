@@ -1,0 +1,25 @@
+body {
+  background: #222;
+}
+
+.list-item {
+  font-size: 1rem;
+  text-align: center;
+  margin-inline: auto;
+  color: #fff;
+  background: dodgerblue;
+  /* border: 2px solid #000; */
+  padding: 16px;
+  width:70%;
+  margin-bottom: 1rem;
+}
+/* 
+.list-item__inner {
+  width: 300px;
+  height: 50px;
+  border: 2px solid red;
+} */
+
+#hero {
+  padding: 5em 0;
+}
