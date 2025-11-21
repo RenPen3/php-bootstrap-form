@@ -16,7 +16,7 @@
     <header>
       <nav class="navbar navbar-expand-sm navbar-dark bg-secondary p-2">
         <div class="container">
-          <a class="navbar-brand text-lg" href="http://localhost/index.php">
+          <a class="navbar-brand text-lg" href="http://localhost:8888/index.php">
             <h3>Logo</h3>
           </a>
           <ul class="navbar-nav">

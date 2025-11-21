@@ -6,13 +6,12 @@
     <main>
 
       <section class="bg-dark p-5">
-        <h2 class="text-white text-center m-0">Subscribers: <?php echo count($allEmails); ?></h2>
+        <h2 class="text-white text-center m-0">Subscribers: <?php echo count($allMembers); ?></h2>
         <form  action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST" id="item-form" class="form-control-lg container-fluid  w-50 needs-validation">
           <div class=" w-50 m-auto mt-5">
 
             <label for="validationCustom01" class="form-label text-light">First Name</label>
             <input name="name" id="validationCustom01" type="text" class="form-control mb-2 rounded-0"  placeholder="First Name" value="" required>
-           
 
             <label for="validationCustom01" class="form-label text-light">E-mail</label>
             <input name="email" id="validationCustom01" type="text" class="form-control mb-2 rounded-0"  placeholder="example@gmail.com" value="" required>
